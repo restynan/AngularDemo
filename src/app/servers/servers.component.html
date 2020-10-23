@@ -1,0 +1,25 @@
+
+<label>user name</label>
+<input type="text" class="form-control" [(ngModel)]="userName"/>
+<br>
+<p>my username is {{ userName }}<p>
+
+ <button class="btn bth-primary" [disabled]= "userName===''" (click)="onAddUser()"> Add User</button>
+
+
+
+<br>
+<br>
+<label> server name</label>
+<!--<input type="text" class="form-control"
+(input)="onUpdateServerName($event)"/>-->
+
+<input type="text" class="form-control" [(ngModel)]="serverName"/>
+
+<br>
+<br>
+<button class="btn bth-primary" [disabled]="!allowNewServer"
+(click)="onCreateServer()" >Add server</button>
+
+<p>{{ serverCreationStatus }}</p>
+
