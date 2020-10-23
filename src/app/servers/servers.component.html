@@ -21,5 +21,9 @@
 <button class="btn bth-primary" [disabled]="!allowNewServer"
 (click)="onCreateServer()" >Add server</button>
 
-<p *ngIf='serverCreated'>{{ serverCreationStatus }}</p>
+<p *ngIf='serverCreated else noServer'>{{ serverCreationStatus }}</p>
+
+<ng-template #noServer>
+    <p> No server was created </p>
+</ng-template>
 
